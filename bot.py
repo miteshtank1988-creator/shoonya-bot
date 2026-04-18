@@ -10,7 +10,7 @@ import logging
 import pandas as pd
 import numpy as np
 from datetime import datetime, date
-from api_helper import ShoonyaApiPy
+from NorenRestApiPy.NorenApi import NorenApi
 from flask import Flask, jsonify
 import threading
 
