@@ -1,0 +1,22 @@
+services:
+  - type: worker
+    name: shoonya-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    plan: free
+    envVars:
+      - key: SHOONYA_USER_ID
+        sync: false
+      - key: SHOONYA_PASSWORD
+        sync: false
+      - key: SHOONYA_TOTP
+        sync: false
+      - key: SHOONYA_VENDOR_CODE
+        sync: false
+      - key: SHOONYA_API_SECRET
+        sync: false
+      - key: SHOONYA_IMEI
+        value: abc1234
+      - key: PAPER_TRADE
+        value: "true"
